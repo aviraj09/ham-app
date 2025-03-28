@@ -69,7 +69,7 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png
 
 if uploaded_file:
     image = Image.open(uploaded_file).convert("RGB")  # Ensure image is RGB
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image, caption="Uploaded Image")
 
     # Preprocess and predict
     input_tensor = transform(image).unsqueeze(0)  # Add batch dimension
